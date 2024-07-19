@@ -3,16 +3,20 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "../../style/BuddyTask.css";
 import moment from "moment";
 import Alert from "./Alert";
-import editIcon from "../../assets/yellow-pill.png"; // Path to the yellow pill image
+import work from "../../assets/work.png"; // Path to the yellow pill image
 import panadolImage from "../../assets/panadol.png"; // Path to the panadol image
 import breakfast from "../../assets/breakfast.png"; // Path to the panadol image
+import voice from "../../assets/voice.png"; // Path to the voice
 
 export const BuddyTask = () => {
   const username = "Janice Rolland";
 
   const image = {
     "breakfast": breakfast,
-    "medicine": panadolImage
+    "medicine": panadolImage,
+    "work": work,
+    "voice": voice
+
   }
 
   const [tasks, setTasks] = useState([
@@ -22,7 +26,8 @@ export const BuddyTask = () => {
       task: "Eat Breakfast",
       time: "10 AM",
       date: "2024-07-19",
-      logo: "breakfast"
+      logo: "breakfast",
+      voice: "voice"
     },
     {
       id: 2,
@@ -30,7 +35,9 @@ export const BuddyTask = () => {
       task: "Take Medication",
       time: "12 PM",
       date: "2024-07-19",
-      logo: "medicine"
+      logo: "medicine",
+      voice: "voice"
+
     },
     {
       id: 3,
@@ -38,6 +45,8 @@ export const BuddyTask = () => {
       task: "Login for work",
       time: "11 AM",
       date: "2024-07-20",
+      logo: "work",
+      voice: "voice"
     },
   ]);
 
@@ -119,6 +128,7 @@ export const BuddyTask = () => {
                     <div key={task.id} className="task-item">
                       {task.task}
                       {!!task.logo && <img className="img-size" onClick={toggle} src={image[task.logo]} alt='breakfast' />}
+                      {!!task.voice && <img className="img-size1" onClick={toggle} src={image[task.voice]} />}
                       </div>
                   ))}
               </div>

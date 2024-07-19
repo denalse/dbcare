@@ -50,9 +50,13 @@
 
 .img-size {
   /* border: 1px solid #ddd; */
-  border-radius: 4px;
-  padding: 5px;
-  width: 100px;
+  border-radius: 2px;
+  padding: 1px;
+  width: 50px;
+}
+
+.img-size1 {
+  width: 30px;
 }
 
 .add-task-button {
