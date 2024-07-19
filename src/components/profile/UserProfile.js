@@ -1,7 +1,8 @@
 import React from "react";
 import '../../style/Profile.css'; // Adjust the path as per your actual project structure
 import profilepic from '../../assets/profilepic.png';
-import qrcode from '../../assets/qrcode.svg';
+// import qrcode from '../../assets/qrcode.svg';
+import QRCodeGenerator from './QRCodeGenerator';
 
 export const UserProfile = () => {
   return (
@@ -11,7 +12,8 @@ export const UserProfile = () => {
       </div>
       <div className="profile-details">
         <div className="qr-code">
-          <img src={qrcode} alt="QR Code" />
+          {/* <img src={qrcode} alt="QR Code" /> */}
+          <QRCodeGenerator/>
         </div>
         <h2>Name: John Doe</h2>
         <p>Phone Number: (123) 456-7890</p>

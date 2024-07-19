@@ -7,6 +7,7 @@ import { BuddyProfile } from "./profile/BuddyProfile";
 import { UserProfile } from "./profile/UserProfile";
 import { BuddyTask } from "./task/BuddyTask";
 import { UserTask } from "./task/UserTask";
+import { GuestProfile } from "./profile/GuestProfile";
 
 export const MyRouter = () => {
   return (
@@ -21,7 +22,7 @@ export const MyRouter = () => {
           <Route path="user/profile" element={<UserProfile />} />
           <Route path="buddy/task" element={<BuddyTask />} />
           <Route path="user/task" element={<UserTask />} />
-
+          <Route path="guest/profile" element={<GuestProfile />} />
         </Routes>
       </div>
     </Router>
