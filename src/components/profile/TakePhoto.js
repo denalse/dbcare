@@ -13,15 +13,17 @@ const TakePhoto = () => {
 
   if (isTakePhotoEnabled) {
     return (
+    <div>
+      <button color="danger" onClick={() => setTakePhoto(false)} >Cancel Photo</button>
       <Camera
         onTakePhoto={
           (dataUri) => {
             handleTakePhoto(dataUri);            
           }}
-      />
+      /></div>
     );
   } else {
-    return (<button onClick={() => setTakePhoto(true)} />);
+    return (<button onClick={() => setTakePhoto(true)} >Start Scanning</button>);
   }
 }
 export default TakePhoto;

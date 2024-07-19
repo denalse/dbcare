@@ -31,19 +31,19 @@ const QRCodeReader = () => {
   if (isEnabled) {
     return (
       <div>
+        <button color="danger" onClick={() => handleEnableQRSCan(false)} >Scan for QR</button>
+        <p>{result}</p>
         <QrReader
           delay={delay}
           style={previewStyle}
           onError={handleError}
           onScan={handleScan}
-        />
-        <p>{result}</p>
-        <button onClick={()=>handleEnableQRSCan(false)} />
+        />        
       </div>
     )
   } else {
     return (
-      <button onClick={()=>handleEnableQRSCan(true)} />
+      <button color="primary" onClick={() => handleEnableQRSCan(true)} >Scan for QR</button>
     )
   }
 }
