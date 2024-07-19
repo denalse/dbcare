@@ -35,3 +35,9 @@ header .logo span{
   cursor: pointer;
   color: #525252;
 }
+
+audio {
+  margin-top: 20px;
+  width: 60%;
+  visibility: hidden;
+}

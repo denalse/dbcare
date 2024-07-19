@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../style/UserTask.css";
 import moment from 'moment';
 import Alert from "./Alert";
+import Text2Speech from "./Text2Speech";
 
 export const UserTask = () => {
   
@@ -20,7 +21,7 @@ export const UserTask = () => {
   },[tasks]);
   const [dateSelected, onDateChange] = useState(new Date());
   let [visible, setVisible] = useState(false);
-  const [alertList, setAlertList] = useState(["I am an alert and I can be dismissed!"]);
+  const [alertList, setAlertList] = useState(["Task Alert! - "]);
 
   const handleEdit = (id) => {
     const selectedTask = tasks.find(todo => todo.id === id);
@@ -75,6 +76,7 @@ export const UserTask = () => {
 
   return (
     <div>
+    <Text2Speech /> 
     <Alert color="info" visible={visible} setVisible={setVisible} contents={alertList}/>
     <div className="user-page-container">
       <div className="user-list-container">
