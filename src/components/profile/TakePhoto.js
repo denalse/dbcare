@@ -21,8 +21,7 @@ const TakePhoto = () => {
       />
     );
   } else {
-    <button onClick={() => setTakePhoto(true)} />
-    return;
+    return (<button onClick={() => setTakePhoto(true)} />);
   }
 }
 export default TakePhoto;

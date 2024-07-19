@@ -21,7 +21,7 @@ export const Home = () => {
         <div className="box" onClick={() => handleNavigation('/user/task')}>
           <h2>User</h2>
         </div>
-        <div className="box" onClick={() => handleNavigation('/guest')}>
+        <div className="box" onClick={() => handleNavigation('/guest/profile')}>
           <h2>Guest</h2>
         </div>
       </div>
