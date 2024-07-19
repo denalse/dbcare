@@ -7,17 +7,27 @@ import work from "../../assets/work.png"; // Path to the yellow pill image
 import panadolImage from "../../assets/panadol.png"; // Path to the panadol image
 import breakfast from "../../assets/breakfast.png"; // Path to the panadol image
 import voice from "../../assets/voice.png"; // Path to the voice
+import audio from "../../assets/audio.mp3"; // 
 
 export const UserTask = () => {
-  const username = "Janice Rolland";
 
   const image = {
     "breakfast": breakfast,
     "medicine": panadolImage,
     "work": work,
     "voice": voice
-
   }
+
+  // let myAudio = document.getElementById("myAudio");
+  // const [isPlaying, setIsPlaying] = useState(false);
+
+const togglePlay = (text) => {
+  const msg = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(msg);
+  // myAudio.onplaying()
+  // setIsPlaying(!isPlaying);
+  // isPlaying ? myAudio.pause() : myAudio.play();
+};
 
   const [tasks, setTasks] = useState([
     {
@@ -27,7 +37,8 @@ export const UserTask = () => {
       time: "10 AM",
       date: "2024-07-19",
       logo: "breakfast",
-      voice: "voice"
+      voice: "voice",
+      audio: true
     },
     {
       id: 2,
@@ -36,8 +47,8 @@ export const UserTask = () => {
       time: "12 PM",
       date: "2024-07-19",
       logo: "medicine",
-      voice: "voice"
-
+      voice: "voice",
+      audio: true,
     },
     {
       id: 3,
@@ -46,13 +57,15 @@ export const UserTask = () => {
       time: "11 AM",
       date: "2024-07-20",
       logo: "work",
-      voice: "voice"
+      voice: "voice",
+      audio: true,
     },
   ]);
 
   const [task, setTask] = useState({ task: "", time: "", date: "" });
   const [dateSelected, onDateChange] = useState(new Date());
   const [modal, setModal] = useState(false);
+  // const [voiceModal, setVoiceModal] = useState(false);
 
   useEffect(() => {
     console.log(tasks);
@@ -66,6 +79,7 @@ export const UserTask = () => {
   };
 
   const toggle = () => setModal(!modal);
+  // const toggle_voice = () => setVoiceModal(!voiceModal);
 
   // const handleChange = (ev) => {
   //   if (!ev.target["validity"].valid) return;
@@ -128,7 +142,7 @@ export const UserTask = () => {
                     <div key={task.id} className="task-item">
                       {task.task}
                       {!!task.logo && <img className="img-size" onClick={toggle} src={image[task.logo]} alt='breakfast' />}
-                      {!!task.voice && <img className="img-size1" onClick={toggle} src={image[task.voice]} />}
+                      {task.audio && <><img className="img-size1" src={image[task.voice]} onClick={ () => togglePlay(task.task)}/> </>}
                       </div>
                   ))}
               </div>
@@ -152,6 +166,7 @@ export const UserTask = () => {
             culpa qui officia deserunt mollit anim id est laborum.
           </ModalBody>
           <ModalFooter>
+            
             {" "}
             <Button color="secondary" onClick={toggle}>
               Cancel

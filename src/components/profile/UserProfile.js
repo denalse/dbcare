@@ -13,11 +13,11 @@ export const UserProfile = () => {
         <div className="qr-code">
           <img src={qrcode} alt="QR Code" />
         </div>
-        <h2>Name: John Doe</h2>
+        <h2>Name: Mark Doe</h2>
         <p>Phone Number: (123) 456-7890</p>
         <p>Age: 40</p>
         <p>Department: Trade Finance</p>
-        <p>Buddy Contact: Mary Jane - (123) 456-7890</p>
+        <p>Buddy Contact: Joe James - (123) 456-7890</p>
         <p>Emergency Contact: (555) 555-5555</p>
         <p>Office Desk Number: 1234</p>
       </div>

@@ -102,7 +102,7 @@ export const BuddyTask = () => {
   return (
     <div className="task-page-container">
       <div className="task-header">
-        <h2>MY SCHEDULED TASKS</h2>
+        <h2>MY BUDDIES SCHEDULED TASKS</h2>
       </div>
       <div className="task-grid">
         <div className="task-time-row">
