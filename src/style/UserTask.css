@@ -95,8 +95,9 @@
   border-radius: 5px;
   text-align: center;
   position: relative;
-  max-width: 500px;
-  width: 100%;
+  max-width: 650px;
+  width: 150%;
+  font-size: small;
 }
 
 .close-button {

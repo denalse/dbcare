@@ -155,15 +155,18 @@ const togglePlay = (text) => {
           Add Task
         </button>
         <Modal isOpen={modal} toggle={toggle}>
-          <ModalHeader toggle={toggle}>What would you like to do?</ModalHeader>
+          <ModalHeader toggle={toggle}>Here are your task: </ModalHeader>
           <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            1.<br/>
+            Check customer's account statement for July and June month is submitted
+            <br/>
+            <br/>
+            2. <br/>
+            Check if registration address in account statement is matching with contract document
+            <br/>
+            <br/>
+            3. <br/>
+            Check the currency in Page-l of contract document is either EUR Or USD
           </ModalBody>
           <ModalFooter>
             
